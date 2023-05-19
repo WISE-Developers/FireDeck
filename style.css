@@ -1,0 +1,210 @@
+
+body {
+    background-color: black;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.branding-panel {
+    padding: 15px;
+    color: white;
+    width: 100%;
+    font-family: 'Bruno Ace SC', cursive;
+    /* border: 1px solid white; */
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.panel {
+    width: 550px;
+    height: 315px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.outer-panel {
+    width: 600px;
+    height: 400px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+
+
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.icon:active {
+    transform: scale(0.95);
+}
+
+.inner-div img.notsquare-img {
+    width: 80px;
+    border-radius: 10px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+.inner-div img.smaller-img {
+    width: 65px !important;
+    height: 65px !important;
+    border-radius: 10px;
+    z-index: -1;
+    position: absolute;
+    top: 10px;
+    left: 10%;
+}
+
+.inner-div img:not(.smaller-img):not(.notsquare-img) {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+}
+
+.inner-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.front-div {
+    z-index: 1;
+
+    /* background-color: rgba(255, 0, 0, 0.5); */
+}
+
+.back-div {
+    z-index: 0;
+    color: #fff700f4;
+    /* center all text content */
+    text-align: center;
+    /* add a black dropshadow to teh text */
+    text-shadow: 0px 0px 2px black;
+    /* set to a nice sans serif font */
+    font-family: sans-serif;
+
+    /* background-color: rgba(0, 0, 255, 0.5); */
+}
+
+.glass2 {
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(0, 0, 0, 0.0) 50%,
+            rgba(0, 0, 0, 0.0) 100%);
+    /* W3C */
+    border-color: rgba(255, 255, 255, 0.4);
+    border-image: none;
+    border-style: inset;
+    border-width: 1px;
+
+}
+
+.glass2:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 2%;
+    width: 96%;
+    height: 2px;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.75) 15%,
+            rgba(0, 0, 0, 0.9) 50%,
+            rgba(0, 0, 0, 0.75) 85%,
+            rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+}
+
+.glass2:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 2%;
+    width: 96%;
+    height: 2px;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.5) 5%,
+            rgba(0, 0, 0, 0.9) 50%,
+            rgba(0, 0, 0, 0.5) 95%,
+            rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.outer-div {
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    /* Adjusted width to accommodate the image padding */
+    height: 80px;
+    /* Adjusted height to accommodate the image padding */
+
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+
+    outline: 0;
+}
